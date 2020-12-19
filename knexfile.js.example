@@ -1,0 +1,18 @@
+// Update with your config settings.
+const mdb = require('knex-mariadb');
+
+module.exports = {
+    client: mdb,
+    connection: {
+      database: 'tasks',
+      user:     'db_user',
+      password: 'db_pass'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+};
